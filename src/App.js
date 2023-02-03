@@ -9,7 +9,7 @@ import Shop from "./components/Shop";
 import Items from "./components/Items";
 function App() {
   return (
-    <div>
+    <div className="App">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
