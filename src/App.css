@@ -1,8 +1,10 @@
+/* style of navbar*/
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 60px;
+  z-index: 3;
   padding: 0 20px;
   background-color: #1d1d1d;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -32,7 +34,7 @@
 }
 
 .nav-item:hover {
-  color: #f0a0c8;
+  color: #6effb2;
 }
 
 .nav-link {
@@ -40,7 +42,153 @@
   color: inherit;
 }
 
-.neon-effect {
-  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff0080,
-    0 0 70px #ff0080, 0 0 80px #ff0080, 0 0 100px #ff0080, 0 0 150px #ff0080;
+/* .neon-effect {
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #000000,
+    0 0 70px #000000, 0 0 80px #000000, 0 0 100px #000000, 0 0 150px #000000;
+} */
+
+/* style of home page*/
+
+/*  https://www.pexels.com/search/videos/laboratory%20neon/ */
+.video-background {
+  /* display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  align-items: center; */
+
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -3;
+  align-items: center;
+}
+
+.video-background-content {
+  /* opacity: 0.4;
+  position: relative;
+  z-index: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  justify-content: center; */
+
+  position: relative;
+  z-index: -3;
+  object-fit: cover;
+
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+
+.titleOfHomePage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* text-shadow: 8px 8px 16px #ffffff; */
+  color: rgb(0, 0, 0);
+
+  /* animation: pulse 2s infinite; */
+
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #8f73f6 0%,
+    #fd03ec 29%,
+    #06f9b0 67%,
+    #fffb94 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+
+  font-size: 50px;
+}
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* about page*/
+
+.aboutText {
+  text-align: center;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  line-height: 3rem;
+  font-size: 25px;
+  margin: 20px;
+  margin-top: 150px;
+}
+
+.content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.content h2 {
+  color: #fff;
+  font-size: 50px;
+  position: absolute;
+}
+
+.content h2:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 2px #133172;
+}
+
+.content h2:nth-child(2) {
+  color: #3c67f4;
+  animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    clip-path: polygon(
+      0% 45%,
+      16% 44%,
+      33% 50%,
+      54% 60%,
+      70% 61%,
+      84% 59%,
+      100% 52%,
+      100% 100%,
+      0% 100%
+    );
+  }
+
+  50% {
+    clip-path: polygon(
+      0% 60%,
+      15% 65%,
+      34% 66%,
+      51% 62%,
+      67% 50%,
+      84% 45%,
+      100% 46%,
+      100% 100%,
+      0% 100%
+    );
+  }
 }
